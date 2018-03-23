@@ -1,8 +1,8 @@
-#Webpack boilerplate code
+# Webpack boilerplate code
 
 
-##Supports
+## Supports
 
-###es6/jsx
-###scss compiler
-###file-loader for images and fonts
+## es6/jsx
+## scss compiler
+## file-loader for images and fonts
