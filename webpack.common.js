@@ -9,7 +9,9 @@ const extractPlugin = new ExtractTextPlugin({ filename: './assets/css/app.css' }
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
-  entry: './app.js',
+  entry: {
+    main: './app.js'
+  },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, 'public')
