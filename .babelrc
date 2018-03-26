@@ -1,6 +1,6 @@
 {
-  "presets": ["react"],
+  "presets": ["env"],
   "plugins": [
-    "syntax-dynamic-import"
+    
   ]
 }
