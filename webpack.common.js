@@ -1,10 +1,10 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const extractPlugin = new ExtractTextPlugin({ filename: './assets/scss/app.scss' });
+const extractPlugin = new ExtractTextPlugin({ filename: './assets/css/app.css' });
 
 
 module.exports = {
@@ -14,14 +14,6 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, 'public')
   },
-  devServer:{
-    contentBase: path.resolve(__dirname, "./public/assets/media"),
-    stats: 'errors-only',
-    open: true,
-    port: 5000,
-    compress: true,
-  },
-  devtool: 'inline-source-map',
   module: {
     noParse: /jquery|lodash/,
     rules:[
@@ -85,10 +77,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['plugin']),
+    new CleanWebpackPlugin(['public']),
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
-    extractPlugin,
+    extractPlugin
   ]
 }
